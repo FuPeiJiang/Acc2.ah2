@@ -28,12 +28,12 @@ finalStr.="[" StrReplace(Acc_Obj.Name() "][" Acc_Obj.Value(), "`n", " ", true) "
 parentArr:=Acc_Obj.children()
 outer:
 while (true) {
-    dArr:=parentArr[idx]
+    oAcc:=parentArr[idx]
 
     thisPath:=parentPath idx
-    finalStr.=thisPath Format("{:" (depth + 1) * 4 - StrLen(thisPath) "}[", "") StrReplace(dArr.Name() "][" dArr.Value(), "`n", " ", true) "]" dArr.Focus() "`n"
+    finalStr.=thisPath Format("{:" (depth + 1) * 4 - StrLen(thisPath) "}[", "") StrReplace(oAcc.Name() "][" oAcc.Value(), "`n", " ", true) "]" oAcc.Focus() "`n"
 
-    children:=dArr.children()
+    children:=oAcc.children()
     if (children.Length) {
         parentArr_save.push(parentArr)
         parentArr:=children
