@@ -90,8 +90,8 @@ class AccObject {
 
 				offset += childSize
 			}
-			return childrenArr
 		}
+		return childrenArr
 
 	}
 
